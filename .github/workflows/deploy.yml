@@ -38,6 +38,7 @@ jobs:
         run: |
           pnpm run build
           cp -r dist/* public
+          touch ./public/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.4.0
